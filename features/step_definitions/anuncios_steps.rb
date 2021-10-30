@@ -20,16 +20,6 @@ Dado("que acesso o formulario de cadastro de anuncios") do
 end
 
 Dado("que eu tenho o seguinte equipamento:") do |table|
-
-  # Isso poderia ter sido usado para resolver o problema do professor, sem precisar mexer no feature, vide branch: aula_cadastro_anuncios_1
-  # steps %{
-  #   Dado que acesso a pagina principal
-  #   Quando submeto minhas credenciais com "thiago.luppi@icloud.com" e "pwd123"
-  # }
-
-  # Como essa é uma tabela de chave-valor, vamos usar o rows_hash:
-  # Esse método pega uma tabela de chave-valor e converter num objeto Ruby.
-  # O resultado fica assim: {"thumb"=>"fender-sb.jpg", "nome"=>"Fender Strato", "categoria"=>"Cordas", "preco"=>"200"}
   @anuncio = table.rows_hash
   Mongodb.new.remove_equipo(@anuncio[:nome], @email)
 end
