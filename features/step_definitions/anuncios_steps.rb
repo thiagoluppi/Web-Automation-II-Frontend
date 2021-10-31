@@ -5,7 +5,7 @@ Dado("que estou logado como {string} e {string}") do |email, password|
   @email = email
   visit "/"
 
-  find("input[placeholder='Seu e-email']").set email
+  find("input[placeholder='Seu email']").set email
   # aqui não precisaria colocar password entre aspas porque se trata de uma palavra. Se fossem duas, como acima, seria necessario.
   find("input[type='password']").set password
 
@@ -13,8 +13,8 @@ Dado("que estou logado como {string} e {string}") do |email, password|
 end
 
 Dado("que acesso o formulario de cadastro de anuncios") do
-  # click_button "Criar anúncio"
-  find(".btn").click
+  click_button "Criar anúncio"
+  # find(".btn").click
   # Checkpoint para garantir que estou no lugar certo.
   expect(page).to have_css "#equipoForm"
 end

@@ -19,7 +19,7 @@ Quando("submeto minhas credenciais com {string} e {string}") do |email, senha|
     Dado que acesso a pagina principal
   }
 
-  find("input[placeholder='Seu e-email']").set email
+  find("input[placeholder='Seu email']").set email
   # aqui não precisaria colocar password entre aspas porque se trata de uma palavra. Se fossem duas, como acima, seria necessario.
   find("input[type='password']").set senha
 
