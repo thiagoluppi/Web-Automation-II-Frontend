@@ -6,5 +6,5 @@ Entao("sou redirecionado para o Dashboard") do
 end
 
 Entao("vejo a mensagem de alerta: {string}") do |alert_message|
-  expect(find(".alert-dark").text).to eql alert_message
+  expect(@alert.dark).to eql alert_message
 end
