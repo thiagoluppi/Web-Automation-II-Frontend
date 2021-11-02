@@ -8,7 +8,7 @@ class SignupPage
     visit "/signup"
   end
 
-  def create(user)
+  def create_user(user)
     # trocamos a string pelo item do array:
     # | nome                  | email                   | senha |
     # | Thiago Messias Luppi  | thiago.luppi@icloud.com | pwd123|

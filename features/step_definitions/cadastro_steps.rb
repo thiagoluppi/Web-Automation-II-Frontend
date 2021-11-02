@@ -16,5 +16,5 @@ Quando("submeto o seguinte formulario de cadastro:") do |table|
   Mongodb.new.remove_user(user[:email])
   # Mongodb.new.remove_user("thiago.luppi@icloud.com")
 
-  @signup_page.create(user)
+  @signup_page.create_user(user)
 end
